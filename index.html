@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>💪 Fitness Tracker</h1>
+        <p>Track your daily fitness journey</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>👟 Steps</h3>
+                <p id="totalSteps">0</p>
+            </div>
+
+            <div class="card">
+                <h3>🔥 Calories</h3>
+                <p id="totalCalories">0</p>
+            </div>
+
+            <div class="card">
+                <h3>⏱️ Minutes</h3>
+                <p id="totalMinutes">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Fitness Activity</h2>
+
+            <form id="fitnessForm">
+                <label>Activity</label>
+                <select id="activity" required>
+                    <option value="">Select Activity</option>
+                    <option value="Walking">Walking</option>
+                    <option value="Running">Running</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="Workout">Workout</option>
+                    <option value="Yoga">Yoga</option>
+                </select>
+
+                <label>Steps</label>
+                <input type="number" id="steps" min="0" placeholder="Enter steps" required>
+
+                <label>Calories Burned</label>
+                <input type="number" id="calories" min="0" placeholder="Enter calories" required>
+
+                <label>Duration (minutes)</label>
+                <input type="number" id="minutes" min="1" placeholder="Enter duration" required>
+
+                <button type="submit">Add Activity</button>
+            </form>
+        </section>
+
+        <section class="history">
+            <h2>Activity History</h2>
+            <div id="activityList">
+                <p>No activities added yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
